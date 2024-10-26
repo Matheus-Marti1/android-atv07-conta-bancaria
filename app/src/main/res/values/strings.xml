@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Atv7 Conta Bancaria</string>
+    <string name="nome_aluno">Matheus Augusto Marti</string>
+    <string name="ra_aluno">RA: 1110482313017</string>
+    <string name="conta_poupanca">Conta Poupança</string>
+    <string name="conta_especial">Conta Especial</string>
+    <string name="hint_cliente">Cliente</string>
+    <string name="hint_conta">Número da Conta</string>
+    <string name="hint_saldo">Saldo</string>
+    <string name="hint_dia">Dia de Rendimento</string>
+    <string name="hint_taxa">% Taxa de Rendimento</string>
+    <string name="hint_limite">Limite de Saque</string>
+    <string name="sacar">Sacar</string>
+    <string name="depositar">Depositar</string>
+</resources>

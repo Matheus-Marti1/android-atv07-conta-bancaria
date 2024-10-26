@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/nome_aluno"
+        app:layout_constraintBottom_toTopOf="@+id/tvRa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="85dp"
+        android:text="@string/ra_aluno"
+        app:layout_constraintBottom_toTopOf="@+id/rgTipoConta"
+        app:layout_constraintStart_toStartOf="@+id/tvAluno"
+        app:layout_constraintTop_toBottomOf="@+id/tvAluno" />
+
+    <RadioGroup
+        android:id="@+id/rgTipoConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/etCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRa">
+
+        <RadioButton
+            android:id="@+id/rbPoupanca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/conta_poupanca" />
+
+        <RadioButton
+            android:id="@+id/rbEspecial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/conta_especial" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="@string/hint_cliente"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="@color/cinza_hint"
+        app:layout_constraintBottom_toTopOf="@+id/etNumConta"
+        app:layout_constraintEnd_toEndOf="@+id/rgTipoConta"
+        app:layout_constraintTop_toBottomOf="@+id/rgTipoConta" />
+
+    <EditText
+        android:id="@+id/etNumConta"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="@string/hint_conta"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColorHint="@color/cinza_hint"
+        app:layout_constraintBottom_toTopOf="@+id/etSaldo"
+        app:layout_constraintStart_toStartOf="@+id/etCliente"
+        app:layout_constraintTop_toBottomOf="@+id/etCliente" />
+
+    <EditText
+        android:id="@+id/etSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="@string/hint_saldo"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/cinza_hint"
+        app:layout_constraintBottom_toTopOf="@+id/etDiaRendimento"
+        app:layout_constraintStart_toStartOf="@+id/etNumConta"
+        app:layout_constraintTop_toBottomOf="@+id/etNumConta" />
+
+    <EditText
+        android:id="@+id/etDiaRendimento"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/hint_dia"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColorHint="@color/cinza_hint"
+        app:layout_constraintBottom_toTopOf="@+id/etTaxa"
+        app:layout_constraintStart_toStartOf="@+id/etSaldo"
+        app:layout_constraintTop_toBottomOf="@+id/etSaldo" />
+
+    <EditText
+        android:id="@+id/etTaxa"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="@string/hint_taxa"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/cinza_hint"
+        app:layout_constraintBottom_toTopOf="@+id/etLimite"
+        app:layout_constraintStart_toStartOf="@+id/etDiaRendimento"
+        app:layout_constraintTop_toBottomOf="@+id/etDiaRendimento" />
+
+    <EditText
+        android:id="@+id/etLimite"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/hint_limite"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/cinza_hint"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaque"
+        app:layout_constraintStart_toStartOf="@+id/etTaxa"
+        app:layout_constraintTop_toBottomOf="@+id/etTaxa" />
+
+    <Button
+        android:id="@+id/btnSaque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="89dp"
+        android:text="@string/sacar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDepositar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLimite" />
+
+    <Button
+        android:id="@+id/btnDepositar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/depositar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSaque"
+        app:layout_constraintTop_toBottomOf="@+id/etLimite" />
+
+    <TextView
+        android:id="@+id/tvRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
